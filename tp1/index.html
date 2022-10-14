@@ -1,0 +1,1286 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- 启用极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="KeyWords" content="首页">
+    <meta name="description" content="首页">
+    <title>首页</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/upimages/favicon.ico"/>
+            <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+        <meta name='apple-touch-fullscreen' content='yes'/>
+        <meta name="full-screen" content="yes">
+        <!-- SEO友好提示 -->
+    <meta name="applicable-device" content="pc,mobile">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/js/comm/html5shiv.js"></script>
+    <script type="text/javascript" src="/js/comm/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/comm/jquery.min.js"></script>
+    <script type="text/javascript" src="js/comm/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="js/comm/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="js/comm/ubox.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/comm/wow.js" charset="utf-8"></script>
+            <script>
+            var js_comm_alert_okButton = '确认',
+             js_comm_alert_cancelButton = '取消',
+             js_comm_alert_login = '登录',
+            js_comm_alert_goreturn = '返回',
+            js_comm_alert_msgTip = '温馨提示!';
+        </script>
+        <script type="text/javascript" src="js/comm/alert.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/0126934.js?1652268249" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/comm/font/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/comm/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/comm/box.css"/>
+    <link rel="stylesheet" type="text/css" href="css/comm/alert.css"/>
+    <link rel="stylesheet" type="text/css" href="css/comm/comm.css?1652268249"/>
+    <link rel="stylesheet" type="text/css" href="css/0126934.css?1652268249"/>
+    <link rel="stylesheet" type="text/css" href="css/comm/iconfont.css?1"/>
+    <script>
+        var batchArr = [];
+        var checkLoad = 0;//判断是否是回调完成的
+    </script>
+    <script>
+    var isOpenMobie = 2;
+    var isOpenPad = 2;
+    if(isOpenMobie == 1){
+        if(isOpenPad == 1){
+            $("body").css("width","auto");
+        }else{
+            //是否手机端判断
+            var ua = navigator.userAgent;
+            var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+                isIphone =!ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+                isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+                isMobile = isIphone || isAndroid;
+            if(isMobile){
+                $("body").css("width","1280px");
+            }else{
+                $("body").css("width","auto");
+            }
+        }
+    }else{
+        $("body").css("width","auto");
+        $("head").append("<meta id='headScreen' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport' />");
+    }
+    //手机屏幕尺寸兼容 purewinter 2019-03-26
+    $(window).on('load',function(){
+        bodyScale();
+    });
+    function bodyScale(){
+        var windowWidth = $(window).width();
+        $("#bodyScale").remove();
+        if(windowWidth < 680){
+            var scale = windowWidth / 375;
+            $("#headScreen").remove();
+            $("head").append("<meta id='headScreen' content='width=375, initial-scale="+scale+", maximum-scale="+scale+", user-scalable=no' name='viewport' />");
+        }else if(windowWidth < 960){
+            var scale = windowWidth / 960;
+            $("#headScreen").remove();
+            $("head").append("<meta id='headScreen' content='width=960, initial-scale="+scale+", maximum-scale="+scale+", user-scalable=no' name='viewport' />");
+        }
+    }
+</script>
+<script>
+        $(window).load(function () {
+            if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+                setTimeout(function () {
+                    new WOW().init()
+                }, 150)
+            }
+            ;
+        });
+        var DIY_WEBSITE_ID = "37841";
+        var DIY_JS_SERVER = "trial-admin.nb.tencentsite.com";
+    </script>
+            <script src="https://trial-admin.nb.tencentsite.com/exusers/login_html_v9_diy.php?idweb=37841&langid=0&UPermission=all"></script>
+            <script src="https://trial-admin.nb.tencentsite.com/js/backscript.js"></script>
+</head>
+<body>
+<!--这里专门处理百度分享文章显示缩略图不正确的问题，因为百度分享读取的是第一张图片，缩略图尽量在400x400,但是至好宽高都要大于400，前提是具有微信分享功能，图片地址通过jq传入 $(".baiduImg").attr("src",shareImg);-->
+<div class="baiduImgSet" style="display: none;">
+    <img src=""  alt="模板素材"  class="baiduImg" >
+</div>
+    <script type="text/javascript">var Default_isFT = 0;</script>
+<script type="text/javascript" src="js/comm/transform.js?201603091"></script>
+            <div id="comm_layout_header" class="layout  scrollToTop_pc"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div class="view_contents">
+                                <div id="div_includeBlock_1494315452764"
+                 class="view includeBlock div  includeView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="div"
+                     class="view_contents" >
+                                <div id="image_logo_1494315509240"
+                 class="view logo image "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image"
+                     class="view_contents" >
+                    <div class="logoStyle modSet">
+<a href='index.html' target="_self"><img class="imgSet" src="img/logo.png?1652268249" title="世御信" alt="世御信" style="width:100%; height:auto"/></a>
+</div>                </div>
+            </div>
+                        <div id="image_logo_1560133924436"
+                 class="view logo image "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image"
+                     class="view_contents" >
+                    <div class="logoStyle modSet">
+<a href='index.html' target="_self"><img class="imgSet" src="img/logo.png?1652268249" title="世御信" alt="世御信" style="width:auto; height:100%; margin-left:0px"/></a>
+</div>                </div>
+            </div>
+                        <div id="dh_style_28_1630053740510"
+                 class="view style_28 dh  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="dh"
+                     class="view_contents" >
+<div id="menu" class="menu menuStyle_28">
+	<div class="menuLayout">
+		<ul class="miniMenu columnSet showmobile">
+			<li class="leftBox">
+				<div class="nav"></div>
+				<div class="sidebar icoMenuSet"><i class="fa fa-navicon" onclick="setDhListen('style_01',this)"></i></div>
+				<div class="menuScroll">
+					<ul class="menuUlCopy">
+								<li id="hot" class="rflex" pageid="126934" showmobile=""><a class="mainMenuSet" href="index.html">
+								首页</a>
+								</li>
+								<li class="rflex" pageid="126933" showmobile=""><a class="mainMenuSet" href="new_details.html">
+								新闻详情</a>
+								</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div class="menuUl_box columnSet dhAreaSet showpc">
+			<ul class="menuUl dflex maxWidth ">
+						<li id="hot" class="rflex isLi" pageid="126934" showpc="">
+							<a class="mainMenuSet Nosub" href="index.html">
+								首页
+							</a>
+						</li>
+						<li class="rflex isLi" pageid="126933" showpc="">
+							<a class="mainMenuSet Nosub" href="new_details.html">
+								新闻详情
+							</a>
+						</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- 导航栏目有下级时禁止跳转 -->
+<script>
+    /*pc,手机显示隐藏*/
+    function is_mobile(){
+        return window.screen.width<767 || ($('body').width() > 0 && $('body').width() < 767);
+    }
+    $(function(){
+        $("#dh_style_28_1630053740510 li").each(function(){
+                    });
+            })
+</script>
+<!-- 二级菜单宽度自适应 -->
+    <script>
+        function navSwtich(obj) {
+            $(obj).siblings(".menuUlCopy").slideToggle(200);
+            $(obj).toggleClass('ontoggle');
+            $(obj).parent().siblings().find(".menuUlCopy").slideUp(200);
+            $(obj).parent().siblings().find(".fa-angle-down").removeClass('ontoggle');
+        }
+        function subLeft_dh_style_28_1630053740510(){
+            $("#dh_style_28_1630053740510 .menuUl>li").each(function(){
+                $(this).find(".menuUl03").css("left",'100%');
+            })
+        }
+        $(window).resize(function() {
+            subLeft_dh_style_28_1630053740510();
+        })
+        $(function(){
+            $("#dh_style_28_1630053740510 .fa-navicon").click(function(){
+                $("#dh_style_28_1630053740510 .menuUlCopy").each(function(){
+                    $(this).siblings(".fa").show();
+                })
+            })
+            subLeft_dh_style_28_1630053740510();
+                        $("#dh_style_28_1630053740510 .subBox").css("top",$("#dh_style_28_1630053740510 .menuUl_box").height());
+            if($("#dh_style_28_1630053740510 .menuUl").hasClass("noHover")){
+                var tabNum = 0;
+                $("#dh_style_28_1630053740510 .menuUl>li").find(".Onsub").each(function(){
+                    tabNum += 1;
+                    $(this).parent().attr("tabNum",tabNum)
+                })
+                $("#dh_style_28_1630053740510 .menuUl>li .Onsub").mouseover(function(){
+                    $("#dh_style_28_1630053740510 .subBox").show();
+                    var index = $(this).parent().attr("tabNum");
+                    $("#dh_style_28_1630053740510 .subBox .subItems").eq(index-1).fadeIn(100).siblings().hide();
+                                        $("#dh_style_28_1630053740510 .subBox .subMenuImgArea .subMenuImgCon").eq(0).fadeIn(100).siblings().hide();
+                                    })
+                $("#dh_style_28_1630053740510 .subBox").mouseleave(function(){
+                    $(this).hide();
+                })
+                $("#dh_style_28_1630053740510 .menuUl>li .Nosub").mouseover(function(){
+                    $("#dh_style_28_1630053740510 .subBox").hide();
+                })
+                //风格41 42
+            }
+        })
+    </script>
+                </div>
+            </div>
+                            </div>
+            </div>
+                            </div>
+            </div>
+                        <div id="layout_1630053603563" class="layout "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div class="view_contents">
+                                <div id="div_a_includeBlock_1630057442747"
+                 class="view a_includeBlock div  includeView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="div"
+                     class="view_contents" >
+                                <div id="text_style_01_1630057547370"
+                 class="view style_01 text  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text"
+                     class="view_contents" >
+                    摩智移动OA                </div>
+            </div>
+                        <div id="text_style_01_1630057684150"
+                 class="view style_01 text  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text"
+                     class="view_contents" >
+                    一站式无缝办公协作，团队上下对齐目标，全面激活组织和个人，定义先进团队的工作方式。                </div>
+            </div>
+                        <div id="image_style_01_1630057779408"
+                 class="view style_01 image "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image"
+                     class="view_contents" >
+                    <div class="imgStyle CompatibleImg picSet">
+			<img class="link-type-" src="https://cdn.yun.sooce.cn/6/34261/png/16310720753455d04def37522b5b7.png?version=0" title="" alt="描述" id="imageModeShow"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="button_style_01_1630057823504"
+                 class="view style_01 button  wow bounce lockHeightView"  data-wow-duration='2s' data-wow-delay='0.25s' data-wow-offset='0' data-wow-iteration='infinite'>
+                <div names="button"
+                     class="view_contents" >
+                    <script>function btnTop(){$("html,body").animate({scrollTop:"0px"},1000);}function btnBottom(){var bodyH = $("html,body").height();$("html,body").animate({scrollTop:bodyH},1000);}</script><button type="button" class="button_default01  btnaSet" >免费试用</button>
+<script type="text/javascript">
+    if(typeof showcart !== 'function'){
+        function showcart(){
+            var langid = 0;
+            if (langid==0 && BodyIsFt) langid = 1;
+            if(window.screen.width<767 || ($('body').width() > 0 && $('body').width() < 767)){
+                location.href = "https://trial-admin.nb.tencentsite.com/exusers/u_cart.php?idweb=37841&act=show&lang="+langid+"&ismobile=1";
+            }else{
+                document.getElementById("boxName").innerHTML="";
+                if(document.getElementById("boxClose")) document.getElementById("boxClose").innerHTML="×";
+                document.getElementById("showiframe").src="https://trial-admin.nb.tencentsite.com/exusers/u_cart.php?idweb=37841&act=show&lang="+langid+"&v=9";
+                box.Show({width:'1000px', height:'600px'});
+            }
+        }
+    }
+</script>                </div>
+            </div>
+                            </div>
+            </div>
+                            </div>
+            </div>
+                        <div id="layout_1630058377551" class="layout "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div class="view_contents">
+                                <div id="text_style_01_1630058650965"
+                 class="view style_01 text  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text"
+                     class="view_contents" >
+                    为什么选择摩智                </div>
+            </div>
+                        <div id="text_style_01_1630058773178"
+                 class="view style_01 text  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text"
+                     class="view_contents" >
+                    30秒视频了解摩智                </div>
+            </div>
+                            </div>
+            </div>
+                        <div id="layout_1630058893845" class="layout "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div class="view_contents">
+                                <div id="image_style_01_1630059292495"
+                 class="view style_01 image "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image"
+                     class="view_contents" >
+                    <div class="imgStyle CompatibleImg picSet">
+			<img class="link-type-" src="https://cdn.yun.sooce.cn/6/34261/jpg/16300593583359766a6f3f0c1e35d.jpg?version=0" title="" alt="描述" id="imageModeShow"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="image_style_01_1630059923483"
+                 class="view style_01 image  ev_c_showView wow flash"  data-wow-duration='2s' data-wow-delay='0.25s' data-wow-offset='0' data-wow-iteration='infinite'>
+                <div names="image"
+                     class="view_contents" >
+                    <div class="imgStyle CompatibleImg picSet">
+			<img class="link-type-" src="https://cdn.yun.sooce.cn/6/34261/png/1630060320835cc64a3e1c7fe8fde.png?version=0" title="" alt="描述" id="imageModeShow"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="div_a_includeBlock_1630060466839"
+                 class="view a_includeBlock div  includeView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="div"
+                     class="view_contents" >
+                                <div id="video_style_02_1630060494258"
+                 class="view style_02 video "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="video"
+                     class="view_contents" >
+                    <script></script><script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<!--playsinline="true" webkit-playsinline="true" 这两个属性让微信浏览器支持小窗内播放-->
+<video id="myVideovideo_style_02_1630060494258" class="video" id='shakeVideo'  muted style="width:100%;height:100%;" controls="controls"   playsinline="true" webkit-playsinline="true" autoplay  poster="img/video/style_02/player_poster.png">
+    <source src="https://cdn.yun.sooce.cn/6/34261/mp4/1631092567484d143999be5869d55.mp4" type="video/mp4">
+    请升级您的浏览器或更换主流浏览器打开。
+</video>
+<script>
+$(function(){
+	if('0' == '1'){
+		let u = navigator.userAgent;
+		let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+		let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios
+		if(isAndroid){
+			setTimeout(function(){ document.getElementById("myVideovideo_style_02_1630060494258").addEventListener("durationchange", androidShow());},300);
+		}else if(isiOS){
+			iosShow();
+		}
+	}
+	function androidShow(){
+		let $videovideo_style_02_1630060494258 = $("#myVideovideo_style_02_1630060494258");
+		setTimeout(function(){ $videovideo_style_02_1630060494258[0].play(true) },50);
+		setTimeout(function(){ $videovideo_style_02_1630060494258[0].pause(true) },100);
+	}
+	function iosShow(){
+		if (window.WeixinJSBridge) {
+		  doPlayvideo_style_02_1630060494258();
+		  setTimeout(function(){ doPausevideo_style_02_1630060494258(); },50);
+		} else {
+		  document.addEventListener("WeixinJSBridgeReady", function(){
+			doPlayvideo_style_02_1630060494258();
+			setTimeout(function(){ doPausevideo_style_02_1630060494258(); },50);
+		  }, false);
+		}
+	}
+	function doPlayvideo_style_02_1630060494258(){
+	  WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+		let $videovideo_style_02_1630060494258 = $("#myVideovideo_style_02_1630060494258")
+		$videovideo_style_02_1630060494258[0].play(true)
+	  })
+	}
+	function doPausevideo_style_02_1630060494258(){
+	  WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+		let $videovideo_style_02_1630060494258 = $("#myVideovideo_style_02_1630060494258")
+		$videovideo_style_02_1630060494258[0].pause(true)
+	  })
+	}
+    $("#myVideovideo_style_02_1630060494258")[0].addEventListener("play", function(){//播放事件
+        $("#myVideovideo_style_02_1630060494258")[0].setAttribute('poster', '');
+    });
+})
+</script>    <script>
+    var video = $("#video_style_02_1630060494258 video")[0];
+    if(video) {
+        video.addEventListener('playing',function(){
+            var this1 = this;
+            this1.play();
+            for(var j=$('video').length-1; j>=0; j--) {
+                var this2 = $('video')[j];
+                if(this1 !== this2) {
+                    this2.pause();
+                }
+            }
+        });
+                if(typeof WeixinJSBrdgeReady=="object" && typeof WeixinJSBridge.invoke == "function"){
+            video.play()
+        }else{
+            if (document.addEventListener) {
+                document.addEventListener("WeixinJSBridgeReady", function () {
+                    video.play();
+                }, false);
+            } else if (document.attachEvent) {
+                document.attachEvent("WeixinJSBridgeReady", function () {
+                    video.play();
+                });
+                document.attachEvent("onWeixinJSBridgeReady", function () {
+                    video.play();
+                });
+            }
+        }
+            }
+</script>
+                </div>
+            </div>
+                        <div id="image_style_01_1630060653002"
+                 class="view style_01 image  ev_c_hidView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image"
+                     class="view_contents" >
+                    <div class="imgStyle CompatibleImg picSet">
+			<img class="link-type-" src="https://cdn.yun.sooce.cn/6/34261/png/16300606698837596866b0b87b950.png?version=0" title="" alt="描述" id="imageModeShow"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                            </div>
+            </div>
+                            </div>
+            </div>
+                        <div id="layout_1630061227801" class="layout "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div class="view_contents">
+                                <div id="image_style_12_1_1630061340680"
+                 class="view style_12_1 image  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image"
+                     class="view_contents" >
+                    <!-- pageSet pagecurSet -->
+<div class="imgStyle_12_1">
+	<ul class="imgTextUl">
+			<li class="imgTextLi modSet">
+				<a href="javascript:;"  style="display: block;cursor:default;">
+				<div class="imgTBoxArea">
+					<div class="image-box">
+						<div class="imgTBox">
+							<img class="picSet picFit" src="https://cdn.yun.sooce.cn/6/34261/png/16300612747549491ed824047c2ff.png?version=1630061287" alt="提供20多种应用场景，通过简单的拖拽快速创建应用。">
+						</div>
+					</div>
+					<div class="ratio" style="margin-top:100%;"></div>
+				</div>
+				<div class="cont">
+					<div class="name titProSet">简单快速搭建应用</div>
+					<div class="hide_view">
+						<div class="subName defProSet">提供20多种应用场景，通过简单的拖拽快速创建应用。</div>
+					</div>
+				</div>
+				</a>
+			</li>
+			<li class="imgTextLi modSet">
+				<a href="javascript:;"  style="display: block;cursor:default;">
+				<div class="imgTBoxArea">
+					<div class="image-box">
+						<div class="imgTBox">
+							<img class="picSet picFit" src="https://cdn.yun.sooce.cn/6/34261/png/16300612747530e454a8f89aba097.png?version=1630061285" alt="通过简单的拖拉拽、连线操作，即可设计出一个实用的流程">
+						</div>
+					</div>
+					<div class="ratio" style="margin-top:100%;"></div>
+				</div>
+				<div class="cont">
+					<div class="name titProSet">可视化操作界面</div>
+					<div class="hide_view">
+						<div class="subName defProSet">通过简单的拖拉拽、连线操作，即可设计出一个实用的流程</div>
+					</div>
+				</div>
+				</a>
+			</li>
+			<li class="imgTextLi modSet">
+				<a href="javascript:;"  style="display: block;cursor:default;">
+				<div class="imgTBoxArea">
+					<div class="image-box">
+						<div class="imgTBox">
+							<img class="picSet picFit" src="https://cdn.yun.sooce.cn/6/34261/png/1630061274752a31468bee718be43.png?version=1630061285" alt="可视化的数据分析面板，从时间、地域等多维度进行数据分析">
+						</div>
+					</div>
+					<div class="ratio" style="margin-top:100%;"></div>
+				</div>
+				<div class="cont">
+					<div class="name titProSet">数据分析便捷高效</div>
+					<div class="hide_view">
+						<div class="subName defProSet">可视化的数据分析面板，从时间、地域等多维度进行数据分析</div>
+					</div>
+				</div>
+				</a>
+			</li>
+			<li class="imgTextLi modSet">
+				<a href="javascript:;"  style="display: block;cursor:default;">
+				<div class="imgTBoxArea">
+					<div class="image-box">
+						<div class="imgTBox">
+							<img class="picSet picFit" src="https://cdn.yun.sooce.cn/6/34261/png/1630061274755ca96b1fe11fb772b.png?version=1630061287" alt="专业技术团队与智能问答机器人 为您随时解答各种问题">
+						</div>
+					</div>
+					<div class="ratio" style="margin-top:100%;"></div>
+				</div>
+				<div class="cont">
+					<div class="name titProSet">24小时在线客服</div>
+					<div class="hide_view">
+						<div class="subName defProSet">专业技术团队与智能问答机器人 为您随时解答各种问题</div>
+					</div>
+				</div>
+				</a>
+			</li>
+			<li class="imgTextLi modSet">
+				<a href="javascript:;"  style="display: block;cursor:default;">
+				<div class="imgTBoxArea">
+					<div class="image-box">
+						<div class="imgTBox">
+							<img class="picSet picFit" src="https://cdn.yun.sooce.cn/6/34261/png/163006127475635d258470a0169e7.png?version=1630061287" alt="拥有海量的各类应用模板，例如生产管理、订单管理">
+						</div>
+					</div>
+					<div class="ratio" style="margin-top:100%;"></div>
+				</div>
+				<div class="cont">
+					<div class="name titProSet">海量解决方案和模板</div>
+					<div class="hide_view">
+						<div class="subName defProSet">拥有海量的各类应用模板，例如生产管理、订单管理</div>
+					</div>
+				</div>
+				</a>
+			</li>
+			<li class="imgTextLi modSet">
+				<a href="javascript:;"  style="display: block;cursor:default;">
+				<div class="imgTBoxArea">
+					<div class="image-box">
+						<div class="imgTBox">
+							<img class="picSet picFit" src="https://cdn.yun.sooce.cn/6/34261/png/1630061274751e8928f3bc042256d.png?version=1630061285" alt="由摩智提供WEB漏洞测、网页木马检测、端口安全检测等安全服务">
+						</div>
+					</div>
+					<div class="ratio" style="margin-top:100%;"></div>
+				</div>
+				<div class="cont">
+					<div class="name titProSet">全生命周期护航</div>
+					<div class="hide_view">
+						<div class="subName defProSet">由摩智提供WEB漏洞测、网页木马检测、端口安全检测等安全服务</div>
+					</div>
+				</div>
+				</a>
+			</li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+                </div>
+            </div>
+                            </div>
+            </div>
+                        <div id="layout_1630061741492" class="layout "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div class="view_contents">
+                                <div id="image_style_01_1630118088547"
+                 class="view style_01 image "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image"
+                     class="view_contents" >
+                    <div class="imgStyle CompatibleImg picSet">
+			<img class="link-type-" src="https://cdn.yun.sooce.cn/6/34261/png/16301182368233b93818ede9ba543.png?version=0" title="" alt="描述" id="imageModeShow"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="button_style_02_1630118289712"
+                 class="view style_02 button  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="button"
+                     class="view_contents" >
+                    <script>function btnTop(){$("html,body").animate({scrollTop:"0px"},1000);}function btnBottom(){var bodyH = $("html,body").height();$("html,body").animate({scrollTop:bodyH},1000);}</script><button type="button" class="button_default02  btnaSet" >未来新方向！</button>
+<script type="text/javascript">
+    if(typeof showcart !== 'function'){
+        function showcart(){
+            var langid = 0;
+            if (langid==0 && BodyIsFt) langid = 1;
+            if(window.screen.width<767 || ($('body').width() > 0 && $('body').width() < 767)){
+                location.href = "https://trial-admin.nb.tencentsite.com/exusers/u_cart.php?idweb=37841&act=show&lang="+langid+"&ismobile=1";
+            }else{
+                document.getElementById("boxName").innerHTML="";
+                if(document.getElementById("boxClose")) document.getElementById("boxClose").innerHTML="×";
+                document.getElementById("showiframe").src="https://trial-admin.nb.tencentsite.com/exusers/u_cart.php?idweb=37841&act=show&lang="+langid+"&v=9";
+                box.Show({width:'1000px', height:'600px'});
+            }
+        }
+    }
+</script>                </div>
+            </div>
+                        <div id="text_style_01_1630118396367"
+                 class="view style_01 text  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text"
+                     class="view_contents" >
+                    拖拽模块&nbsp;<div>轻松定制</div>                </div>
+            </div>
+                        <div id="text_style_01_1630118650796"
+                 class="view style_01 text  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text"
+                     class="view_contents" >
+                    使用摩智0A创建自定义办公系统，根据公司本身的业务场景，选择已经有版块，快速拖拽即可完成，无需代码编程。                </div>
+            </div>
+                            </div>
+            </div>
+                        <div id="layout_1630119194748" class="layout "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div class="view_contents">
+                                <div id="text_style_01_1630119194751"
+                 class="view style_01 text  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text"
+                     class="view_contents" >
+                    就是这么简单                </div>
+            </div>
+                        <div id="text_style_01_1630119194758"
+                 class="view style_01 text  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text"
+                     class="view_contents" >
+                    凭借在AI技术领域的不断开拓，可实现根据公司行业、规模、智能匹配推荐方案，省时、省事！                </div>
+            </div>
+                            </div>
+            </div>
+                        <div id="layout_1630119428611" class="layout "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div class="view_contents">
+                                <div id="image_style_01_1630119501751"
+                 class="view style_01 image "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image"
+                     class="view_contents" >
+                    <div class="imgStyle CompatibleImg picSet">
+			<img class="link-type-" src="https://cdn.yun.sooce.cn/6/34261/png/16301195163846e60853dedfcfdf0.png?version=0" title="" alt="描述" id="imageModeShow"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="image_style_01_1630119560483"
+                 class="view style_01 image "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image"
+                     class="view_contents" >
+                    <div class="imgStyle CompatibleImg picSet">
+			<img class="link-type-" src="https://cdn.yun.sooce.cn/6/34261/png/16301195163853a220004b7106964.png?version=1630119527" title="" alt="描述" id="imageModeShow"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                            </div>
+            </div>
+                        <div id="layout_1630120087111" class="layout "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div class="view_contents">
+                                <div id="image_style_01_1630120087114"
+                 class="view style_01 image "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image"
+                     class="view_contents" >
+                    <div class="imgStyle CompatibleImg picSet">
+			<img class="link-type-" src="https://cdn.yun.sooce.cn/6/34261/png/1630120314168a03cb2182a51cdb5.png?version=0" title="" alt="描述" id="imageModeShow"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="text_style_01_1630120087125"
+                 class="view style_01 text  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text"
+                     class="view_contents" >
+                    10k+的企业和组织正在使用摩智OA<br>                </div>
+            </div>
+                        <div id="text_style_01_1630120087129"
+                 class="view style_01 text  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text"
+                     class="view_contents" >
+                    通过简单云搭建各类应用，在线即可轻松解决公司各类管
+理难题，比如审批流程、车辆管理、费控及物资管理、日
+报周报、人事及绩效管理等，帮助公司大幅提升办公效
+率，真正做到了降本增效。                </div>
+            </div>
+                            </div>
+            </div>
+                        <div id="layout_1630120525439" class="layout "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div class="view_contents">
+                                <div id="text_style_01_1630120525444"
+                 class="view style_01 text  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text"
+                     class="view_contents" >
+                    我们的客户                </div>
+            </div>
+                        <div id="text_style_01_1630120525455"
+                 class="view style_01 text  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text"
+                     class="view_contents" >
+                    帮助10k+中小微企业完成数字信息化转型                </div>
+            </div>
+                            </div>
+            </div>
+                        <div id="layout_1630120586729" class="layout "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div class="view_contents">
+                                <div id="image_style_11_1630121453135"
+                 class="view style_11 image  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image"
+                     class="view_contents" >
+                    <!-- pageSet pagecurSet-->
+<div class="imgStyle_11">
+	<input type='hidden' id='current_page_1630121453135' value="10"/>
+	<input type='hidden' id='show_per_page_1630121453135' value="10"/>
+	<ul id="content_1630121453135">
+			<li class="imgItems modSet">
+				<a href="javascript:;" style="cursor:default;">
+				<img src="https://cdn.yun.sooce.cn/6/34261/png/163012193002659da0e757b39aeb3.png?version=1630121942"  class="noimgLoadLate"  alt="163012193002659da0e757b39aeb3" style="display:none;">
+				<div style="background:url('https://cdn.yun.sooce.cn/6/34261/png/163012193002659da0e757b39aeb3.png?version=1630121942');" class="theimgdiv"></div>
+				</a>
+				<div class="ratio" ></div>
+			</li>
+			<li class="imgItems modSet">
+				<a href="javascript:;" style="cursor:default;">
+				<img src="https://cdn.yun.sooce.cn/6/34261/png/163012193002585c0ea4e325d64b2.png?version=1630121942"  class="noimgLoadLate"  alt="163012193002585c0ea4e325d64b2" style="display:none;">
+				<div style="background:url('https://cdn.yun.sooce.cn/6/34261/png/163012193002585c0ea4e325d64b2.png?version=1630121942');" class="theimgdiv"></div>
+				</a>
+				<div class="ratio" ></div>
+			</li>
+			<li class="imgItems modSet">
+				<a href="javascript:;" style="cursor:default;">
+				<img src="https://cdn.yun.sooce.cn/6/34261/png/16301219300237d214896efe7595a.png?version=1630121942"  class="noimgLoadLate"  alt="16301219300237d214896efe7595a" style="display:none;">
+				<div style="background:url('https://cdn.yun.sooce.cn/6/34261/png/16301219300237d214896efe7595a.png?version=1630121942');" class="theimgdiv"></div>
+				</a>
+				<div class="ratio" ></div>
+			</li>
+			<li class="imgItems modSet">
+				<a href="javascript:;" style="cursor:default;">
+				<img src="https://cdn.yun.sooce.cn/6/34261/png/1630121930024d208f3e6630b1451.png?version=1630121942"  class="noimgLoadLate"  alt="1630121930024d208f3e6630b1451" style="display:none;">
+				<div style="background:url('https://cdn.yun.sooce.cn/6/34261/png/1630121930024d208f3e6630b1451.png?version=1630121942');" class="theimgdiv"></div>
+				</a>
+				<div class="ratio" ></div>
+			</li>
+			<li class="imgItems modSet">
+				<a href="javascript:;" style="cursor:default;">
+				<img src="https://cdn.yun.sooce.cn/6/34261/png/16301219300227bc3cdce5f031be8.png?version=1630121941"  class="noimgLoadLate"  alt="16301219300227bc3cdce5f031be8" style="display:none;">
+				<div style="background:url('https://cdn.yun.sooce.cn/6/34261/png/16301219300227bc3cdce5f031be8.png?version=1630121941');" class="theimgdiv"></div>
+				</a>
+				<div class="ratio" ></div>
+			</li>
+			<li class="imgItems modSet">
+				<a href="javascript:;" style="cursor:default;">
+				<img src="https://cdn.yun.sooce.cn/6/34261/png/1630121930021d096b04fd8da40b7.png?version=1630121941"  class="noimgLoadLate"  alt="1630121930021d096b04fd8da40b7" style="display:none;">
+				<div style="background:url('https://cdn.yun.sooce.cn/6/34261/png/1630121930021d096b04fd8da40b7.png?version=1630121941');" class="theimgdiv"></div>
+				</a>
+				<div class="ratio" ></div>
+			</li>
+			<li class="imgItems modSet">
+				<a href="javascript:;" style="cursor:default;">
+				<img src="https://cdn.yun.sooce.cn/6/34261/png/16301219300217b078a784584098b.png?version=1630121941"  class="noimgLoadLate"  alt="16301219300217b078a784584098b" style="display:none;">
+				<div style="background:url('https://cdn.yun.sooce.cn/6/34261/png/16301219300217b078a784584098b.png?version=1630121941');" class="theimgdiv"></div>
+				</a>
+				<div class="ratio" ></div>
+			</li>
+			<li class="imgItems modSet">
+				<a href="javascript:;" style="cursor:default;">
+				<img src="https://cdn.yun.sooce.cn/6/34261/png/1630121930019980f1efc4f122e8c.png?version=1630121940"  class="noimgLoadLate"  alt="1630121930019980f1efc4f122e8c" style="display:none;">
+				<div style="background:url('https://cdn.yun.sooce.cn/6/34261/png/1630121930019980f1efc4f122e8c.png?version=1630121940');" class="theimgdiv"></div>
+				</a>
+				<div class="ratio" ></div>
+			</li>
+			<li class="imgItems modSet">
+				<a href="javascript:;" style="cursor:default;">
+				<img src="https://cdn.yun.sooce.cn/6/34261/png/1630121930020b4890ca5b62ae957.png?version=1630121940"  class="noimgLoadLate"  alt="1630121930020b4890ca5b62ae957" style="display:none;">
+				<div style="background:url('https://cdn.yun.sooce.cn/6/34261/png/1630121930020b4890ca5b62ae957.png?version=1630121940');" class="theimgdiv"></div>
+				</a>
+				<div class="ratio" ></div>
+			</li>
+			<li class="imgItems modSet">
+				<a href="javascript:;" style="cursor:default;">
+				<img src="https://cdn.yun.sooce.cn/6/34261/png/163012193001731528ca1988096ff.png?version=1630121940"  class="noimgLoadLate"  alt="163012193001731528ca1988096ff" style="display:none;">
+				<div style="background:url('https://cdn.yun.sooce.cn/6/34261/png/163012193001731528ca1988096ff.png?version=1630121940');" class="theimgdiv"></div>
+				</a>
+				<div class="ratio" ></div>
+			</li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+    <script>
+        function phSize(){
+            $("#image_style_11_1630121453135 li").each(function(){
+                var img_W = $(this).find("img").width();
+                var img_H = $(this).find("img").height();
+                if(img_W < img_H){
+                    $(this).find("img").css({"width":"100%","height":"auto"})
+                }else{
+                    $(this).find("img").css({"width":"auto","height":"100%"})
+                }
+            });
+        }
+    </script>
+    <script>
+        $(function(){
+            var obj = $("#image_style_11_1630121453135");
+            var picItems = obj.find("li.imgItems");
+            var num = 0;
+            var picBox;
+            if(0 == 1){
+                picItems.click(function(){
+                    var topH = $(window).scrollTop();
+                    var index = $(this).index();
+                    var curPic = $(this).find("img").attr("src");
+                    num = index;
+                    var picBoxhtml = $("<div class='imgShowBox'><im"+""+"g src='"+curPic+"' alt=''><div class='imgButton'><span class='prevImg'><i class='fa fa-angle-left'></i></span><span class='closeShowPic'>×</span><span class='nextImg'><i class='fa fa-angle-right'></i></span></div></div>");
+                    //"+""+"为了躲开图片延时加载的代码替换
+                    $("body").append(picBoxhtml);
+                    picBox = $(".imgShowBox");
+                    pdSize();
+                    //判断下一张和上一张按钮的显示
+                    if(picItems.length == 1){
+                        $("body").find(".imgButton>.nextImg,.imgButton>.prevImg").css("visibility","hidden")
+                    }
+                    if(picItems.length-1 == $(this).index()){
+                        $("body").find(".imgButton>.nextImg").css("visibility","hidden")
+                    }
+                    if($(this).index() == 0){
+                        $("body").find(".imgButton>.prevImg").css("visibility","hidden")
+                    }
+                    //关闭
+                    $("body").find(".imgButton>.closeShowPic").click(function(){
+                        $(".imgShowBox").remove();
+                        $("body").removeClass("pos_fixed");
+                        $(window).scrollTop(topH);
+                    });
+                    //下一张
+                    $("body").find(".imgButton>.nextImg").click(function(){
+                        $(".imgShowBox img").css("max-height","none");
+                        var len = obj.find("li:has('img')").length;
+                        $(this).siblings().css("visibility","visible");
+                        num++;
+                        if(num >= len){
+                            num = len-1;
+                        }
+                        if(num == len-1){
+                            $(this).css("visibility","hidden");
+                        }
+                        curPics();
+                        pdSize();
+                    });
+                    //上一张
+                    $("body").find(".imgButton>.prevImg").click(function(){
+                        $(".imgShowBox img").css("max-height","none");
+                        $(this).siblings().css("visibility","visible");
+                        num--;
+                        if(num <= 0){
+                            num = 0;
+                            $(this).css("visibility","hidden");
+                        }
+                        curPics();
+                        pdSize();
+                    });
+                });
+            }
+            //切换大图
+            function curPics(){
+                var newImg = obj.find("li").eq(num).find("img").attr("src");
+                picBox.find("img").attr("src",newImg);
+            }
+            //判断展开显示效果
+            function pdSize(){
+                var imgH = picBox.find("img").height();
+                var winH = $(window).height();
+                if(imgH>winH){
+                    $("body").addClass("pos_fixed");
+                    picBox.addClass("scroll");
+                    picBox.animate({"scrollTop":"0px"},200);
+                }else{
+                    $("body").removeClass("pos_fixed");
+                    picBox.removeClass("scroll");
+                    $(".imgShowBox img").css("max-height","80%");
+                }
+            }
+            //遍历所有图片宽高定位
+            picItems.each(function(){
+                var img_W = $(this).find("img").width();
+                var img_H = $(this).find("img").height();
+                if(img_W < img_H){
+                    $(this).find("img").css({"width":"100%","height":"auto"})
+                }else{
+                    $(this).find("img").css({"width":"auto","height":"100%"})
+                }
+            });
+        });
+    </script>
+                </div>
+            </div>
+                            </div>
+            </div>
+                        <div id="layout_1630122316955" class="layout "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div class="view_contents">
+                                <div id="image_style_01_1630122580981"
+                 class="view style_01 image "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image"
+                     class="view_contents" >
+                    <div class="imgStyle CompatibleImg picSet">
+			<img class="link-type-" src="https://cdn.yun.sooce.cn/6/34261/png/16301225534165912600cb942158c.png?version=1630122564" title="" alt="描述" id="imageModeShow"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="button_style_01_1630122629348"
+                 class="view style_01 button  wow bounce lockHeightView"  data-wow-duration='2s' data-wow-delay='0.25s' data-wow-offset='0' data-wow-iteration='infinite'>
+                <div names="button"
+                     class="view_contents" >
+                    <script>function btnTop(){$("html,body").animate({scrollTop:"0px"},1000);}function btnBottom(){var bodyH = $("html,body").height();$("html,body").animate({scrollTop:bodyH},1000);}</script><button type="button" class="button_default01  btnaSet" >免费试用</button>
+<script type="text/javascript">
+    if(typeof showcart !== 'function'){
+        function showcart(){
+            var langid = 0;
+            if (langid==0 && BodyIsFt) langid = 1;
+            if(window.screen.width<767 || ($('body').width() > 0 && $('body').width() < 767)){
+                location.href = "https://trial-admin.nb.tencentsite.com/exusers/u_cart.php?idweb=37841&act=show&lang="+langid+"&ismobile=1";
+            }else{
+                document.getElementById("boxName").innerHTML="";
+                if(document.getElementById("boxClose")) document.getElementById("boxClose").innerHTML="×";
+                document.getElementById("showiframe").src="https://trial-admin.nb.tencentsite.com/exusers/u_cart.php?idweb=37841&act=show&lang="+langid+"&v=9";
+                box.Show({width:'1000px', height:'600px'});
+            }
+        }
+    }
+</script>                </div>
+            </div>
+                        <div id="text_style_01_1630122671625"
+                 class="view style_01 text  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text"
+                     class="view_contents" >
+                    欢迎咨询！&nbsp;<div>拥有您的OA系统！<br>
+</div>                </div>
+            </div>
+                        <div id="image_style_01_1631102592165"
+                 class="view style_01 image "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image"
+                     class="view_contents" >
+                    <div class="imgStyle CompatibleImg picSet">
+			<img class="link-type-" src="https://cdn.yun.sooce.cn/6/34261/jpg/1631102959942f8736f547b901f20.jpg?version=0" title="" alt="描述" id="imageModeShow"/>
+</div>
+<!-- 新加的js  -->
+                </div>
+            </div>
+                        <div id="div_blank_11_1631103018906"
+                 class="view blank_11 div  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="div"
+                     class="view_contents" >
+                    <div class="blank_11 ">
+<div class="roundcs modSet" ></div>
+</div>
+                </div>
+            </div>
+                            </div>
+            </div>
+                        <div id="comm_layout_footer" class="layout "  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div class="view_contents">
+                                <div id="div_a_includeBlock_1630122860936"
+                 class="view a_includeBlock div  includeView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="div"
+                     class="view_contents" >
+                                <div id="text_style_01_1630122892668"
+                 class="view style_01 text  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text"
+                     class="view_contents" >
+                    摩智科技                </div>
+            </div>
+                        <div id="text_style_01_1630122940933"
+                 class="view style_01 text  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text"
+                     class="view_contents" >
+                    admin@yourdomain.com&nbsp;<div>400- 000-0000&nbsp;</div><div>X省XX市XX街XX号
+</div>                </div>
+            </div>
+                        <div id="footerCustom_footerDh_01_1630123000144"
+                 class="view footerDh_01 footerCustom  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="footerCustom"
+                     class="view_contents" >
+<div id="menu" class="menu footerCustom_01">
+	<div class="menuLayout">
+		<div class="menuUl_box columnSet dhAreaSet showpc">
+			<ul class="menuUl dflex maxWidth ">
+						<li class="rflex isLi" pageid="126934" showpc="">
+							<a class="mainMenuSet Nosub" href="index.html">
+								首页
+							</a>
+						</li>
+			</ul>
+		</div>
+		<div class="menuUl_box columnSet dhAreaSet showmobile">
+			<ul class="menuUl dflex maxWidth ">
+							<li id="hot" class="rflex isLi" pageid="126934" showpc="">
+							<a class="mainMenuSet Nosub" href="index.html">
+								首页
+							</a>
+						</li>
+							<li class="rflex isLi" pageid="126933" showpc="">
+							<a class="mainMenuSet Nosub" href="new_details.html">
+								新闻详情
+							</a>
+						</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- 导航栏目有下级时禁止跳转 -->
+<script>
+$(function(){
+	if($("#footerCustom_footerDh_01_1630123000144 .menuUl").hasClass("noHover")){
+		var tabNum = 0;
+		$("#footerCustom_footerDh_01_1630123000144 .menuUl>li").find(".Onsub").each(function(){
+			tabNum += 1;
+			$(this).parent().attr("tabNum",tabNum)
+		})
+	}
+})
+</script>
+<!-- 每行显示列数 -->
+<!--  -->
+<script>
+/*pc,手机显示隐藏*/
+function is_mobile(){
+	return window.screen.width<767 || ($('body').width() > 0 && $('body').width() < 767);
+}
+function _checkWindwo(){
+	if(is_mobile()){
+		$("#footerCustom_footerDh_01_1630123000144 .showmobile").show();
+		$("#footerCustom_footerDh_01_1630123000144 .showpc").hide();
+	}else{
+		$("#footerCustom_footerDh_01_1630123000144 .showmobile").hide();
+		$("#footerCustom_footerDh_01_1630123000144 .showpc").show();
+	}
+}
+_checkWindwo();
+$(window).resize(function() {
+	_checkWindwo();
+})
+</script>
+                </div>
+            </div>
+                        <div id="text_style_01_1630123082599"
+                 class="view style_01 text  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="text"
+                     class="view_contents" >
+                    关注我们                </div>
+            </div>
+                        <div id="image_style_22_1631072331709"
+                 class="view style_22 image  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="image"
+                     class="view_contents" >
+<!-- modSet titleSet imgSet detailSet--><!-- pageSet pagecurSet -->
+<div class="imgStyle_22">
+	<input type='hidden' id='current_page_1631072331709' value="1"/>
+	<input type='hidden' id='show_per_page_1631072331709' value="1"/>
+	<ul class="imgTextUl" id="content_1631072331709">
+			<li class="imgTextLi modSet">
+				<div class="left">
+					<div class="image-box">
+						<a href="javascript:;" style="cursor:default;">
+						<div class="imgTBox">
+							<img src="https://cdn.yun.sooce.cn/6/34261/png/1631072569193a3bf9a19295face4.png?version=0"  class="imgSet"  alt="1631072569193a3bf9a19295face4"/>
+						</div>
+						</a>
+					</div>
+					<div class="ratio" style="margin-top:100%;"></div>
+				</div>
+				<div class="cont">
+					<div class="title">
+						<div class="name titleSet">关注我们</div>
+					</div>
+				</div>
+			</li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+                </div>
+            </div>
+                            </div>
+            </div>
+                        <div id="copyright_style_01_1630123250342"
+                 class="view style_01 copyright  lockHeightView"  data-wow-duration='0s' data-wow-delay='0s' data-wow-offset='0' data-wow-iteration='1'>
+                <div names="copyright"
+                     class="view_contents" >
+                    <div class="copyrightStyle01 modSet">
+        <div class="copyright_view line_view">Copyright @ 2019-2022 Company name All rights reserved.</div>
+        <div class="icp_view line_view"><a target="_blank" href="https://beian.miit.gov.cn/">粤ICP备14000000号</a></div>
+        <div class="lw_view line_view"><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44000000000000"><img class="lw_icon" src="img/copyright/style_01/beiab.png" alt="粤公网安备44000000000000号">粤公网安备44000000000000号</a></div>
+</div>
+                </div>
+            </div>
+                            </div>
+            </div>
+            <div class="bottomMenu 123"><ul><li style="height:100%;padding-top:2px;">
+							<a href="index.html" class="" style=""><div class="menuItem"><div class="menuIco"><img src="https://cdn.yun.sooce.cn/6/34261/png/1631099984233b29cecc6f70dacd4.png?version=0" alt="首页"></div><input type="hidden" class="menuIcon" value="" ><input type="hidden" class="menuColor" value="" ><div class="menuName" style="color:;">首页</div></div></a>
+							<div class="submenuItems" style="display:none;"></div>
+						</li><script>
+        $(function() {
+           var lang = 0;
+           if (typeof(Default_isFT) !== 'undefined'){
+              if(lang == '0'){
+				lang = Default_isFT;
+				if(typeof(BodyIsFt) == 'undefined' || BodyIsFt == null){
+				    BodyIsFt = 0;
+                }
+				if(BodyIsFt == '0'){
+					lang = BodyIsFt;
+				}else if(BodyIsFt == '1'){
+					lang = BodyIsFt;
+				}
+			}
+			$('.bottomMenu a').each(function() {
+			  var hrefstr = $(this).attr('href');
+			  var laststr=hrefstr.substring(hrefstr.length-7);
+			  if (laststr == 'langid=') {
+			        hrefstr = hrefstr + lang;
+			    $(this).attr('href',hrefstr)
+			  }
+			})
+           }
+        })
+        </script><li style="height:100%;padding-top:2px;">
+							<a href="javascript:void(0);" class="" style=""><div class="menuItem"><div class="menuIco"><img src="https://cdn.yun.sooce.cn/6/34261/png/163109998423224754c1de1c5900e.png?version=1631100098" alt="产品服务"></div><input type="hidden" class="menuIcon" value="" ><input type="hidden" class="menuColor" value="" ><div class="menuName" style="color:#666666;">产品服务</div></div></a>
+							<div class="submenuItems" style="display:none;"></div>
+						</li><script>
+        $(function() {
+           var lang = 0;
+           if (typeof(Default_isFT) !== 'undefined'){
+              if(lang == '0'){
+				lang = Default_isFT;
+				if(typeof(BodyIsFt) == 'undefined' || BodyIsFt == null){
+				    BodyIsFt = 0;
+                }
+				if(BodyIsFt == '0'){
+					lang = BodyIsFt;
+				}else if(BodyIsFt == '1'){
+					lang = BodyIsFt;
+				}
+			}
+			$('.bottomMenu a').each(function() {
+			  var hrefstr = $(this).attr('href');
+			  var laststr=hrefstr.substring(hrefstr.length-7);
+			  if (laststr == 'langid=') {
+			        hrefstr = hrefstr + lang;
+			    $(this).attr('href',hrefstr)
+			  }
+			})
+           }
+        })
+        </script><li style="height:100%;padding-top:2px;">
+							<a href="javascript:void(0);" class="" style=""><div class="menuItem"><div class="menuIco"><img src="https://cdn.yun.sooce.cn/6/34261/png/16310999842319caa6249465b5257.png?version=1631100098" alt="客户案例"></div><input type="hidden" class="menuIcon" value="" ><input type="hidden" class="menuColor" value="" ><div class="menuName" style="color:#666666;">客户案例</div></div></a>
+							<div class="submenuItems" style="display:none;"></div>
+						</li><script>
+        $(function() {
+           var lang = 0;
+           if (typeof(Default_isFT) !== 'undefined'){
+              if(lang == '0'){
+				lang = Default_isFT;
+				if(typeof(BodyIsFt) == 'undefined' || BodyIsFt == null){
+				    BodyIsFt = 0;
+                }
+				if(BodyIsFt == '0'){
+					lang = BodyIsFt;
+				}else if(BodyIsFt == '1'){
+					lang = BodyIsFt;
+				}
+			}
+			$('.bottomMenu a').each(function() {
+			  var hrefstr = $(this).attr('href');
+			  var laststr=hrefstr.substring(hrefstr.length-7);
+			  if (laststr == 'langid=') {
+			        hrefstr = hrefstr + lang;
+			    $(this).attr('href',hrefstr)
+			  }
+			})
+           }
+        })
+        </script><li style="height:100%;padding-top:2px;">
+							<a href="javascript:void(0);" class="" style=""><div class="menuItem"><div class="menuIco"><img src="https://cdn.yun.sooce.cn/6/34261/png/16310999842334a6107357bf1fec0.png?version=1631100099" alt="技术支持"></div><input type="hidden" class="menuIcon" value="" ><input type="hidden" class="menuColor" value="" ><div class="menuName" style="color:#666666;">技术支持</div></div></a>
+							<div class="submenuItems" style="display:none;"></div>
+						</li><script>
+        $(function() {
+           var lang = 0;
+           if (typeof(Default_isFT) !== 'undefined'){
+              if(lang == '0'){
+				lang = Default_isFT;
+				if(typeof(BodyIsFt) == 'undefined' || BodyIsFt == null){
+				    BodyIsFt = 0;
+                }
+				if(BodyIsFt == '0'){
+					lang = BodyIsFt;
+				}else if(BodyIsFt == '1'){
+					lang = BodyIsFt;
+				}
+			}
+			$('.bottomMenu a').each(function() {
+			  var hrefstr = $(this).attr('href');
+			  var laststr=hrefstr.substring(hrefstr.length-7);
+			  if (laststr == 'langid=') {
+			        hrefstr = hrefstr + lang;
+			    $(this).attr('href',hrefstr)
+			  }
+			})
+           }
+        })
+        </script><li style="height:100%;padding-top:2px;">
+							<a href="javascript:void(0);" class="" style=""><div class="menuItem"><div class="menuIco"><img src="https://cdn.yun.sooce.cn/6/34261/png/1631099984233f669c8272956cd84.png?version=1631100099" alt="关于我们"></div><input type="hidden" class="menuIcon" value="" ><input type="hidden" class="menuColor" value="" ><div class="menuName" style="color:#666666;">关于我们</div></div></a>
+							<div class="submenuItems" style="display:none;"></div>
+						</li><script>
+        $(function() {
+           var lang = 0;
+           if (typeof(Default_isFT) !== 'undefined'){
+              if(lang == '0'){
+				lang = Default_isFT;
+				if(typeof(BodyIsFt) == 'undefined' || BodyIsFt == null){
+				    BodyIsFt = 0;
+                }
+				if(BodyIsFt == '0'){
+					lang = BodyIsFt;
+				}else if(BodyIsFt == '1'){
+					lang = BodyIsFt;
+				}
+			}
+			$('.bottomMenu a').each(function() {
+			  var hrefstr = $(this).attr('href');
+			  var laststr=hrefstr.substring(hrefstr.length-7);
+			  if (laststr == 'langid=') {
+			        hrefstr = hrefstr + lang;
+			    $(this).attr('href',hrefstr)
+			  }
+			})
+           }
+        })
+        </script></ul></div>
+<script>
+$(function(){
+    $(".showSubMenu").click(function(){
+        $(this).next().toggle();
+		$(this).parent("li").siblings("li").children(".showSubMenu").next().css("display","none");
+    });
+    var bottomLen = $(".bottomMenu > ul > li > a").length;
+    var url = window.location.pathname;
+    var loc = url.substring(url.lastIndexOf("/")+1, url.length);
+    for(var i=0;i<bottomLen;i++){
+        var curObj = $(".bottomMenu ul li a").eq(i);
+        if(loc == curObj.attr("href")){
+            var img = curObj.children(".menuItem").children(".menuIco").children("img").attr("src");
+            var menuIcon = curObj.children(".menuItem").children(".menuIcon").val();
+            var menuColor = curObj.children(".menuItem").children(".menuColor").val();
+            var menuName = curObj.children(".menuItem").children(".menuName").html();
+            if(menuIcon != ""){
+                curObj.children(".menuItem").children(".menuIco").children("img").attr("src",menuIcon);
+            }
+            if(menuColor != ""){
+                curObj.children(".menuItem").children(".menuName").css("color",menuColor);
+            }
+        }
+    }
+});
+$(window).resize(function(){
+    if($("body").width()<640){
+        var bottomHeight = $(".bottomMenu").height();
+        $("body").css("padding-bottom",bottomHeight+"px");
+    }else{
+        $("body").css("padding-bottom","0px");
+    }
+});
+</script>
+<script>
+    $(function () {
+        sendBatch(batchArr);
+    });
+</script>
+<script type="text/javascript" src="https://trial-admin.nb.tencentsite.com/webapp/UserPanel/share/js.js" charset="utf-8"></script>
+</body>
+</html>
